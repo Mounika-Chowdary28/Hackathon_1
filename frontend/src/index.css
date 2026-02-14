@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,28 +7,25 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --primary-dark: #1e40af;
-  --secondary-color: #64748b;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --danger-color: #ef4444;
-  --background: #f8fafc;
+  --primary-color: #10b981;
+  --primary-2: #059669;
+  --accent-color: #a7f3d0;
+  --muted: #6b7280;
+  --background: linear-gradient(180deg,#fbfbff 0%, #f7f7ff 100%);
   --surface: #ffffff;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --border-color: #e2e8f0;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --text-primary: #0f172a;
+  --text-secondary: #6b7280;
+  --border-color: rgba(6,95,70,0.06);
+  --shadow: 0 8px 30px rgba(16,185,129,0.06);
+  --shadow-sm: 0 6px 18px rgba(16,185,129,0.04);
+  --shadow-lg: 0 20px 50px rgba(16,185,129,0.08);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
+  background: var(--background);
   color: var(--text-primary);
   line-height: 1.6;
 }
@@ -58,44 +57,23 @@ code {
   text-decoration: none;
 }
 
-.btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg,var(--primary-color),var(--primary-2));
   color: white;
+  border-radius: 999px;
+  padding: 10px 20px;
 }
 
-.btn-primary:hover:not(:disabled) {
-  background-color: var(--primary-dark);
-}
+.btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(124,58,237,0.14); }
 
-.btn-secondary {
-  background-color: var(--secondary-color);
-  color: white;
-}
+.btn-secondary { background-color: var(--muted); color: white; }
+.btn-success { background-color: #10b981; color: white; }
+.btn-danger { background-color: #ef4444; color: white; }
 
-.btn-success {
-  background-color: var(--success-color);
-  color: white;
-}
-
-.btn-danger {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-}
-
-.btn-outline:hover {
-  background-color: var(--background);
-}
+.btn-outline { background-color: transparent; border: 1px solid var(--border-color); color: var(--text-primary); }
+.btn-outline:hover { background-color: rgba(15,23,42,0.03); }
 
 /* Form elements */
 .form-group {
@@ -137,10 +115,11 @@ select.form-control {
 /* Cards */
 .card {
   background: var(--surface);
-  border-radius: 8px;
-  padding: 24px;
+  border-radius: 10px;
+  padding: 20px;
   box-shadow: var(--shadow);
   margin-bottom: 20px;
+  border: 1px solid rgba(15,23,42,0.04);
 }
 
 .card-header {
@@ -278,8 +257,10 @@ select.form-control {
 /* Leaflet overrides */
 .leaflet-container {
   height: 400px;
-  border-radius: 8px;
+  border-radius: 10px;
   z-index: 1;
+  background: #ffffff;
+  border: 1px solid rgba(15,23,42,0.04);
 }
 
 /* Responsive */
@@ -293,3 +274,17 @@ select.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* Global typography + headings */
+h1, .section-title, .page-header h1, .admin-header h1, .dashboard-header h1, .detail-header h1 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 28px; font-weight: 800; }
+h2 { font-size: 20px; font-weight: 700; }
+
+/* Surface helpers */
+.surface-card { background: var(--surface); border-radius: 12px; box-shadow: var(--shadow); padding: 18px }
+

@@ -1,18 +1,38 @@
 .dashboard-page {
   padding: 40px 0;
   min-height: 100vh;
+  position: relative;
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+  background: linear-gradient(90deg,var(--primary-color),var(--primary-2));
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
 }
 
+/* Decorative hero background for top of page */
+.dashboard-page::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  background: linear-gradient(90deg, rgba(16,185,129,0.08), rgba(16,185,129,0.04));
+  z-index: 0;
+}
+
+.dashboard-page .container { position: relative; z-index: 1; }
+
 .dashboard-header h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 28px;
+  margin: 0;
 }
 
 .stats-grid {
@@ -24,11 +44,11 @@
 
 .stat-card {
   background: var(--surface);
-  padding: 24px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   text-align: center;
-  border-left: 4px solid var(--primary-color);
+  border-left: 6px solid rgba(16,185,129,0.12);
 }
 
 .stat-card.pending {
@@ -96,11 +116,11 @@
 
 .issue-card {
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 
 .issue-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
 }
 
