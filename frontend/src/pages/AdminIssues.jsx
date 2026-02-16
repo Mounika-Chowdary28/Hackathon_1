@@ -106,7 +106,7 @@ const AdminIssues = () => {
             <Link to="/admin/dashboard" className="btn btn-outline">
               ← Dashboard
             </Link>
-            <Link to="/admin/map" className="btn btn-primary">
+            <Link to="/map" className="btn btn-primary">
               🗺️ Map View
             </Link>
           </div>
@@ -115,7 +115,7 @@ const AdminIssues = () => {
         <div className="filters-section card">
           <div className="filters-row">
             <input
-              type="text"
+              type="text"map
               className="form-control search-input"
               placeholder="🔍 Search by title or area..."
               value={filters.search}
