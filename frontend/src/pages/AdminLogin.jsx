@@ -37,7 +37,7 @@ const AdminLogin = () => {
       const response = await login(formData);
       
       // Check if user has admin role
-      if (response.user && response.user.role === 'admin') {
+      if (response.user.role === 'admin') {
         toast.success('Admin login successful!');
         navigate('/admin/dashboard');
       } else {
