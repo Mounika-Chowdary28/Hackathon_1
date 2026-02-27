@@ -4,6 +4,22 @@ A full-stack web application for reporting and managing civic issues like pothol
 
 ## 🚀 Quick Start Guide
 
+### Cloudinary Setup (Image Uploads)
+
+This project uses [Cloudinary](https://cloudinary.com/) for image uploads. You must create a free Cloudinary account and add your credentials to the backend `.env` file:
+
+1. Go to https://cloudinary.com/ and sign up for a free account.
+2. In your Cloudinary dashboard, find your **Cloud name**, **API Key**, and **API Secret**.
+3. Add these to your `backend/.env` file:
+
+```
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+**Note:** Without valid Cloudinary credentials, image uploads will not work in the application.
+
 ### Backend Setup
 
 1. Navigate to backend directory:

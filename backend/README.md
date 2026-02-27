@@ -6,7 +6,7 @@ A comprehensive backend system for reporting and managing civic issues like poth
 
 - 🔐 **User Authentication** - JWT-based auth with user and admin roles
 - 📍 **Location Tracking** - Geospatial queries for finding nearby issues
-- 📸 **Image Upload** - Multer-based image storage for issue evidence
+- 📸 **Image Upload** - Images are uploaded and stored securely using [Cloudinary](https://cloudinary.com/) for issue evidence
 - 👥 **Role-Based Access** - Separate permissions for users and admins
 - 📊 **Admin Dashboard** - Statistics and issue management
 - 🔄 **Status Tracking** - Track issues from Pending to Resolved
@@ -18,7 +18,7 @@ A comprehensive backend system for reporting and managing civic issues like poth
 - **MongoDB** & **Mongoose** - Database
 - **JWT** - Authentication
 - **Bcrypt** - Password hashing
-- **Multer** - File uploads
+- **Multer** & **Cloudinary** - File uploads and cloud image storage
 - **Geospatial Indexing** - Location-based queries
 
 ## Getting Started
@@ -26,6 +26,25 @@ A comprehensive backend system for reporting and managing civic issues like poth
 ### Prerequisites
 - Node.js (v14+)
 - MongoDB Atlas account or local MongoDB
+
+
+### Cloudinary Setup
+
+This project uses [Cloudinary](https://cloudinary.com/) for image uploads. You must create a free Cloudinary account and obtain your credentials:
+
+1. Go to https://cloudinary.com/ and sign up for a free account.
+2. In your Cloudinary dashboard, find your **Cloud name**, **API Key**, and **API Secret**.
+3. Add these to your `.env` file in the backend directory:
+
+```
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+**Note:** Without valid Cloudinary credentials, image uploads will not work.
+
+---
 
 ### Installation
 
