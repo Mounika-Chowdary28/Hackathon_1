@@ -32,7 +32,7 @@ export const authAPI = {
 // Issues API
 export const issuesAPI = {
   create: (formData) => {
-    return api.post(`${API_URL}/issues`, formData, {
+    return api.post('/issues', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${localStorage.getItem('token')}`,
