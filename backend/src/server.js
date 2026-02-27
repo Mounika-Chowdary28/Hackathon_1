@@ -16,7 +16,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://civicissues.vercel.app"
+  origin: [
+    "http://localhost:3000",
+    "https://civicissues.vercel.app"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
