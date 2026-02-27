@@ -2,6 +2,8 @@
 
 A full-stack web application for reporting and managing civic issues like potholes, broken streetlights, garbage overflow, and water leakage with GPS location tracking and image evidence.
 
+## Website is open for Issues.
+
 **Visit Here:** : [https://civicissues.vercel.app/](https://civicissues.vercel.app/)
 
 ## 🚀 Quick Start Guide
