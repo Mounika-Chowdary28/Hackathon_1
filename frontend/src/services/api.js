@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://civicissues.onrender.com';
+const API_URL = 'https://civicissues.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
